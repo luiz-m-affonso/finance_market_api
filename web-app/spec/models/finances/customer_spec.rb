@@ -45,5 +45,7 @@ RSpec.describe Customer, type: :model do
       phone: ''
       )
     }
+
+    it { is_expected.not_to be_valid }
   end
 end

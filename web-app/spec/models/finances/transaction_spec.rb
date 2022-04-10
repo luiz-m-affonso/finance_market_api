@@ -11,7 +11,6 @@ RSpec.describe Transaction, type: :model do
     it { is_expected.to validate_presence_of(:type) }
     it { is_expected.to validate_presence_of(:description)}
 
-
     context 'when Transaction has valid attributes' do
       it { is_expected.to be_valid }
     end
