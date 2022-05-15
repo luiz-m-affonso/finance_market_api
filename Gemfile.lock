@@ -94,6 +94,8 @@ GEM
     minitest (5.15.0)
     msgpack (1.5.1)
     nio4r (2.5.8)
+    nokogiri (1.13.3-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.3-x86_64-linux)
       racc (~> 1.4)
     puma (5.6.4)
@@ -149,6 +151,8 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+    shoulda-matchers (5.1.0)
+      activesupport (>= 5.2.0)
     spring (4.0.0)
     sprockets (4.0.3)
       concurrent-ruby (~> 1.0)
@@ -167,6 +171,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
+  x86_64-darwin-20
   x86_64-linux
 
 DEPENDENCIES
@@ -178,6 +183,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 6.1.4, >= 6.1.4.1)
   rspec-rails (~> 4.0)
+  shoulda-matchers (~> 5.0)
   spring
   sqlite3 (~> 1.4)
   tzinfo-data
