@@ -2,7 +2,7 @@ module Finances
   module Bank
     module Domain
       describe Account do
-        let(:subject) { described_class.new(id: 1, customer: customer.id, balance: 1000, account_type: 'Payment') }
+        let(:subject) { described_class.new(id: 1, customer_id: customer.id, balance: 1000, account_type: 'Payment') }
         let(:customer) {
           Customer.new(
             id: 1,
@@ -18,8 +18,8 @@ module Finances
         }
 
         describe '#initialize' do
-          it 'should initialize an account' do
-            it { is_expected.to respond_to(:customer) }
+          context 'should initialize an account' do
+            it { is_expected.to respond_to(:customer_id) }
             it { is_expected.to respond_to(:balance) }
             it { is_expected.to respond_to(:account_type) }
           end
