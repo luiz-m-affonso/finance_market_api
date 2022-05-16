@@ -4,6 +4,7 @@ module Finances
       describe Customer do
         let(:subject) {
           described_class.new(
+            id: 1,
             email: 'affonso@gmail.com',
             first_name: 'Luiz',
             last_name: 'Affonso',
@@ -28,6 +29,7 @@ module Finances
 
         describe '#to_hash' do
           let(:customer_hash) do {
+              id: 1,
               email: 'affonso@gmail.com',
               first_name: 'Luiz',
               last_name: 'Affonso',
