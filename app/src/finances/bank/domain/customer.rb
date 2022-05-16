@@ -1,9 +1,10 @@
 module Finances
   module Bank
     class Customer
-      attr_reader :email
+      attr_reader :email, :first_name, :last_name, :address, :city, :state, :zip, :phone
 
-      def initialize(email:, first_name:, last_name:, address:, city:, state:, zip:, phone:)
+      def initialize(id:, email:, first_name:, last_name:, address:, city:, state:, zip:, phone:)
+        @id = id
         @email = email
         @first_name = first_name
         @last_name = last_name
@@ -16,6 +17,7 @@ module Finances
 
       def to_hash
         {
+          id: @id,
           email: @email,
           first_name: @first_name,
           last_name: @last_name,
